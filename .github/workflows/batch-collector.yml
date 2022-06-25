@@ -19,3 +19,15 @@ jobs:
         steps:
          - run: |
               echo "${{ matrix.package }}"
+         - name: Setup deno
+           uses: denoland/setup-deno@main
+           with:
+             deno-version: v1.10.x
+         - name: Check out repo
+           uses: actions/checkout@v2
+         - name: Fetch data
+           uses: githubocto/flat@v3
+           with:
+             http_url: 'http://api.weatherapi.com/v1/current.json?key=${{ secrets.API_KEY }}&q=${{ matrix.package }}&aqi=no'
+             downloaded_filename: ./data/${{ matrix.package }}.json
+             postprocess: postprocess.js
