@@ -12,7 +12,10 @@ jobs:
         strategy:
             fail-fast: false
             matrix:
-                package: [\"tel aviv\", \"jerusalem\", \"haifa\"]
+                package: 
+                  - haifa
+                  - tel aviv
+                  - jerusalem
         steps:
          - run: |
               echo "${{ matrix.value }}"
