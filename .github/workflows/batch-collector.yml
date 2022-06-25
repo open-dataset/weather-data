@@ -7,7 +7,7 @@ on:
     paths:
       - .github/workflows/batch-collector.yml
 jobs:
-    batch_print:
+    collect:
         runs-on: ubuntu-latest
         strategy:
             max-parallel: 1
@@ -23,7 +23,7 @@ jobs:
                   - baqa-al-gharbiyye
                   - bat-yam
                   - beersheba
-                  - beit-she'an
+                  - beit-shean
                   - beit-shemesh
                   - bnei-brak
                   - dimona
