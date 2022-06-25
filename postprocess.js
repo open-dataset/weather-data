@@ -19,7 +19,7 @@ const newJson = {
 delete newJson.condition;
 
 // Step 3. Write a new JSON file with our filtered data
-await writeJSON(filename, newJson) // create a new JSON file with just the Bitcoin price
+await writeJSON(filename, [newJson]) // create a new JSON file with just the Bitcoin price
 console.log("Wrote a post process file")
 
 // Optionally delete the original file
