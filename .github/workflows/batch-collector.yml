@@ -18,4 +18,4 @@ jobs:
                   - jerusalem
         steps:
          - run: |
-              echo "${{ matrix.value }}"
+              echo "${{ matrix.package }}"
