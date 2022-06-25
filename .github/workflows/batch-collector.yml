@@ -14,79 +14,79 @@ jobs:
             fail-fast: false
             matrix:
                 package: 
-                 - acre
-                 - afula
-                 - arad
-                 - arraba
-                 - ashdod
-                 - ashkelon
-                 - baqa al-gharbiyye
-                 - bat yam
-                 - beersheba
-                 - beit she'an
-                 - beit shemesh
-                 - bnei brak
-                 - dimona
-                 - eilat
-                 - elad
-                 - givat shmuel
-                 - givatayim
-                 - hadera
-                 - haifa
-                 - herzliya
-                 - hod hasharon
-                 - holon
-                 - jerusalem
-                 - kafr qasim
-                 - karmiel
-                 - kfar saba
-                 - kfar yona
-                 - kiryat ata
-                 - kiryat bialik
-                 - kiryat gat
-                 - kiryat malakhi
-                 - kiryat motzkin
-                 - kiryat ono
-                 - kiryat shmona
-                 - kiryat yam
-                 - lod
-                 - maalot-tarshiha
-                 - migdal haemek
-                 - modiin-maccabim-reut
-                 - nahariya
-                 - nazareth
-                 - nesher
-                 - ness ziona
-                 - netanya
-                 - netivot
-                 - nof hagalil
-                 - ofakim
-                 - or akiva
-                 - or yehuda
-                 - petah tikva
-                 - qalansawe
-                 - raanana
-                 - rahat
-                 - ramat gan
-                 - ramat hasharon
-                 - ramla
-                 - rehovot
-                 - rishon lezion
-                 - rosh haayin
-                 - safed
-                 - sakhnin
-                 - sderot
-                 - shefa-amr
-                 - tamra
-                 - tayibe
-                 - tel aviv-yafo
-                 - tiberias
-                 - tira
-                 - tirat carmel
-                 - umm al-fahm
-                 - yavne
-                 - yehud-monosson
-                 - yokneam illit
+                - acre
+                - afula
+                - arad
+                - arraba
+                - ashdod
+                - ashkelon
+                - baqa-al-gharbiyye
+                - bat-yam
+                - beersheba
+                - beit-she'an
+                - beit-shemesh
+                - bnei-brak
+                - dimona
+                - eilat
+                - elad
+                - givat-shmuel
+                - givatayim
+                - hadera
+                - haifa
+                - herzliya
+                - hod-hasharon
+                - holon
+                - jerusalem
+                - kafr-qasim
+                - karmiel
+                - kfar-saba
+                - kfar-yona
+                - kiryat-ata
+                - kiryat-bialik
+                - kiryat-gat
+                - kiryat-malakhi
+                - kiryat-motzkin
+                - kiryat-ono
+                - kiryat-shmona
+                - kiryat-yam
+                - lod
+                - maalot-tarshiha
+                - migdal-haemek
+                - modiin-maccabim-reut
+                - nahariya
+                - nazareth
+                - nesher
+                - ness-ziona
+                - netanya
+                - netivot
+                - nof-hagalil
+                - ofakim
+                - or-akiva
+                - or-yehuda
+                - petah-tikva
+                - qalansawe
+                - raanana
+                - rahat
+                - ramat-gan
+                - ramat-hasharon
+                - ramla
+                - rehovot
+                - rishon-lezion
+                - rosh-haayin
+                - safed
+                - sakhnin
+                - sderot
+                - shefa-amr
+                - tamra
+                - tayibe
+                - tel-aviv-yafo
+                - tiberias
+                - tira
+                - tirat-carmel
+                - umm-al-fahm
+                - yavne
+                - yehud-monosson
+                - yokneam-illit
         steps:
 
          - name: Setup deno
