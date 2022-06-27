@@ -1,4 +1,4 @@
-name: batch collector
+name: collector
 on:
   schedule:
     - cron: 0 0 * * *
