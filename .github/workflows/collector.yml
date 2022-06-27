@@ -5,7 +5,7 @@ on:
   workflow_dispatch: {}
   push:
     paths:
-      - .github/workflows/batch-collector.yml
+      - .github/workflows/collector.yml
 jobs:
     collect:
         runs-on: ubuntu-latest
