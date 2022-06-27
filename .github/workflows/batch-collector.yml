@@ -95,7 +95,6 @@ jobs:
          - name: Check out repo
            uses: actions/checkout@v2
          - run: |
-              sleep 5
               git reset --hard main
               git pull
          - name: Fetch data
