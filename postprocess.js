@@ -6,7 +6,7 @@ try {
   const allfilename = './data/all.json';
   const filename = Deno.args[0] 
   const json = await readJSON(filename)
-  const allJson = (await readJSON(filename)) || []
+  const allJson = (await readJSON(allfilename)) || []
   console.log(Deno.args);
   console.log(allJson);
   console.log(json)
