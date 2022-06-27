@@ -3,8 +3,10 @@
 import { readJSON, writeJSON, removeFile } from './flat/mod.ts' 
 try {
   // Step 1: Read the downloaded_filename JSON
+  const allfilename = 'data/all.json';
   const filename = Deno.args[0] 
   const json = await readJSON(filename)
+  const allJson = (await readJSON(filename)) || []
   console.log(Deno.args);
   console.log(json)
 
@@ -18,7 +20,8 @@ try {
   delete newJson.condition;
 
   // Step 3. Write a new JSON file with our formated data
-  await writeJSON(filename, [newJson]) // create a new JSON file with just the Bitcoin price
+  await writeJSON(filename, newJson) // create a new JSON file with just the Bitcoin price
+  await writeJSON(allfilename, [...allJson, newJson]) // create a new JSON file with just the Bitcoin price
   console.log("Wrote a post process file")
 
 } catch (err) {
