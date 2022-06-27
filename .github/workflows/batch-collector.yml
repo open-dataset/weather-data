@@ -95,18 +95,12 @@ jobs:
          - name: Check out repo
            uses: actions/checkout@v2
          - run: |
+              sleep 5
               git reset --hard main
               git pull
          - name: Fetch data
-           uses: Wandalen/wretry.action@v1.0.11
+           uses: githubocto/flat@v3
            with:
-             uses: githubocto/flat@v3
-               with:
-                 http_url: 'http://api.weatherapi.com/v1/current.json?key=${{ secrets.API_KEY }}&q=${{ matrix.package }}-israel&aqi=no'
-                 downloaded_filename: ./data/${{ matrix.package }}.json
-                 postprocess: postprocess.js
-             with: |
-               node-version: 14.x
-               architecture: x64
-             attempt_limit: 3
-             attempt_delay: 10000
+              http_url: 'http://api.weatherapi.com/v1/current.json?key=${{ secrets.API_KEY }}&q=${{ matrix.package }}-israel&aqi=no'
+              downloaded_filename: ./data/${{ matrix.package }}.json
+              postprocess: postprocess.js
