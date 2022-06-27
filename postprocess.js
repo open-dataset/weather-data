@@ -3,11 +3,12 @@
 import { readJSON, writeJSON, removeFile } from './flat/mod.ts' 
 try {
   // Step 1: Read the downloaded_filename JSON
-  const allfilename = 'data/all.json';
+  const allfilename = './data/all.json';
   const filename = Deno.args[0] 
   const json = await readJSON(filename)
   const allJson = (await readJSON(filename)) || []
   console.log(Deno.args);
+  console.log(allJson);
   console.log(json)
 
   // Step 2: Filter specific data we want to keep and write to a new JSON file
