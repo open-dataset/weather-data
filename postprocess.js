@@ -18,7 +18,7 @@ try {
 
   delete newJson.condition;
 
-  const index = data.findIndex(({ name }) => name === newJson.name)
+  const index = allJson.findIndex(({ name }) => name === newJson.name)
 
   if (index === -1) {
      await writeJSON(allfilename, [...allJson, newJson]) // create a new JSON file with just the Bitcoin price
