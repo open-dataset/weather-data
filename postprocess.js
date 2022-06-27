@@ -8,8 +8,6 @@ try {
   const json = await readJSON(filename)
   const allJson = (await readJSON(allfilename)) || []
   console.log(Deno.args);
-  console.log(allJson);
-  console.log(json)
 
   // Step 2: Filter specific data we want to keep and write to a new JSON file
   const newJson = {
