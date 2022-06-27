@@ -20,9 +20,16 @@ try {
 
   delete newJson.condition;
 
+  const index = data.findIndex(({ name }) => name === 'Acre')
+
+  if (index === -1) {
+     await writeJSON(allfilename, [...allJson, newJson]) // create a new JSON file with just the Bitcoin price
+  } else {
+     allJson[index] = newJson;
+     await writeJSON(allfilename, allJson) // create a new JSON file with just the Bitcoin price
+  }
   // Step 3. Write a new JSON file with our formated data
   await writeJSON(filename, newJson) // create a new JSON file with just the Bitcoin price
-  await writeJSON(allfilename, [...allJson, newJson]) // create a new JSON file with just the Bitcoin price
   console.log("Wrote a post process file")
 
 } catch (err) {
